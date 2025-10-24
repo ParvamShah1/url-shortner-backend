@@ -17,7 +17,6 @@ async function handleUserSignup(req, res) {
       sameSite: 'none', // Changed back to 'lax' for localhost
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       path: '/',
-      domain: 'localhost' // Explicitly set domain
     });
     
     console.log('Cookie set for user:', user.email);

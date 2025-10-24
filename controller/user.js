@@ -13,8 +13,8 @@ async function handleUserSignup(req, res) {
     
     res.cookie('token', token, { 
       httpOnly: true,
-      secure: false, // set to true in production with HTTPS
-      sameSite: 'lax', // Changed back to 'lax' for localhost
+      secure: true, // set to true in production with HTTPS
+      sameSite: 'none', // Changed back to 'lax' for localhost
       maxAge: 24 * 60 * 60 * 1000, // 24 hours
       path: '/',
       domain: 'localhost' // Explicitly set domain
